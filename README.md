@@ -8,16 +8,20 @@ First make sure you have NodeJS ^v12.13 installed on your machine
 
 ## working on Client-side
 
-    *Open a terminal.
-    *cd client
-    *npm install
-    *start working
-    *push your work
+   <ol>
+      <li>Open a terminal.</li>
+      <li>cd client</li>
+      <li>npm install</li>
+      <li>start working</li>
+      <li>push your work</li>
+   </ol>
 
 ## Working on Server-side
 
-    *Open terminal.
-    *cd server
-    *npm install
-    *start working
-    *push your work
+   <ol>
+      <li>Open a terminal.</li>
+      <li>cd server</li>
+      <li>npm install</li>
+      <li>start working</li>
+      <li>push your work</li>
+   </ol>
