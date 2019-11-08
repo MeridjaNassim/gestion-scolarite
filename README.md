@@ -13,6 +13,7 @@ First make sure you have NodeJS ^v12.13 installed on your machine
       <li>cd client</li>
       <li>npm install</li>
       <li>start working</li>
+      <li>to run client : npm start</li>
       <li>push your work</li>
    </ol>
 
@@ -23,5 +24,6 @@ First make sure you have NodeJS ^v12.13 installed on your machine
       <li>cd server</li>
       <li>npm install</li>
       <li>start working</li>
+      <li>to run server : nodemon</li>
       <li>push your work</li>
    </ol>
