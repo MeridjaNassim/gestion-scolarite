@@ -1,0 +1,15 @@
+{
+  "name": "plannification",
+  "version": "1.0.0",
+  "description": "MicroService de gestion de plannification",
+  "main": "plannification.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Meridja Nassim",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1"
+  }
+}

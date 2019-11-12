@@ -1,0 +1,14 @@
+{
+  "name": "db",
+  "version": "1.0.0",
+  "description": "MicroService of the Database",
+  "main": "db.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Meridja Nassim",
+  "license": "ISC",
+  "dependencies": {
+    "mongoose": "^5.7.10"
+  }
+}
