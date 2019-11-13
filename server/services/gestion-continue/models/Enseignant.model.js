@@ -1,4 +1,4 @@
-const db = require("../db");
+const db = require("../../db/db");
 const mongoose = db.mongoose;
 const Schema = mongoose.Schema;
 const String = Schema.Types.String;

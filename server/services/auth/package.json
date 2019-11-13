@@ -2,7 +2,7 @@
   "name": "auth",
   "version": "1.0.0",
   "description": "Authentification MicroService",
-  "main": "auth.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -12,7 +12,12 @@
   "author": "Meridja Nassim",
   "license": "ISC",
   "dependencies": {
+    "bcrypt": "^3.0.6",
     "body-parser": "^1.19.0",
-    "express": "^4.17.1"
+    "config": "^3.2.4",
+    "express": "^4.17.1",
+    "joi": "^14.3.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.7.10"
   }
 }
