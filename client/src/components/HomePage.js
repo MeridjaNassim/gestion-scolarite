@@ -47,21 +47,21 @@ function HomePage(){
                 </section>
             </div>
             <footer>
-                <section id="sec1">
+                <section id="secLOGO">
                     <img src={esiLOGO} alt="esiSCO" />
                     <h2>SCO</h2>
                 </section>
-                <section id="sec2">
+                <section id="secRights">
                     <p>Scolarité Web App 2019 Tout droit réservé sous license ESI</p>
                     <h3>Réalisé par</h3>
                     <p>Meridja Abdallah Nassim<br/>Boudis Mohamed Abdelmadjid<br/>Adjal yacine</p>
                 </section>
                 
-                <section id="sec3">
+                <section id="secPRob">
                     <p>Problème ? <br/>Contactez L'adminisrateur :<br/>AdminSCO@esi.dz</p>
                 </section >
 
-                <section id="sec4">
+                <section id="secESI">
                     <img src={esiLOGO} alt="esiSCO" />
                     <p>école nationale supérieure<br />d'informatique<br />Alger Ouedsmar</p>
                 </section>
