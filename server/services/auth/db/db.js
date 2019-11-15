@@ -1,7 +1,9 @@
 const mongoose = require("mongoose");
 
 mongoose.connect("mongodb://localhost:27017/gestionscolarite", {
-  useNewUrlParser: true
+  useNewUrlParser: true,
+  useCreateIndex: true,
+  useUnifiedTopology: true
 });
 
 const connection = mongoose.connection;
