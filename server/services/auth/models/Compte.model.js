@@ -56,7 +56,7 @@ compteSchema.methods.generateAuthToken = function() {
   );
   return token;
 };
-function validateCompte(compte) {
+function validateCompte(compte, callback) {
   const schema = {
     username: joi
       .string()
@@ -72,7 +72,7 @@ function validateCompte(compte) {
       .min(3)
       .max(255)
   };
-  return joi.validate(compte, schema);
+  return joi.validate(compte, schema, callback);
 }
 const Compte = mongoose.model("Compte", compteSchema);
 exports.Compte = Compte;
