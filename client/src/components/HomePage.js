@@ -15,6 +15,12 @@ import ModifEns from '../Resources/teacher.svg';
 import esiLOGO from '../Resources/esi.png';
 import outils from '../Resources/pencil-case.svg';
 
+//scrolling function
+function ScrollDown() {
+    var element = document.querySelector("#scrollto");
+    element.scrollIntoView({ behavior: 'smooth'});
+  }
+          
 function HomePage(){
 
     return(
@@ -34,10 +40,10 @@ function HomePage(){
                 </div>
                 <div className="DetailSection">
                     <h3 >Plus de details</h3>
-                    <button className="floating">v</button>
+                    <button onClick={ScrollDown} className="floating">v</button>
                 </div>
             </header>
-            <div className="HomeGestionDescription">
+            <div id="scrollto" className="HomeGestionDescription">
                 <h1>Gestion de scolarité</h1>
                 <p>Automatiser le traitement de l’information est une <br/>
                 solution inévitable, c’est pour cela que nous avons opté pour <br/>
@@ -49,10 +55,14 @@ function HomePage(){
             </div>
             <div className="HomeToutOutils">
                 <h1>Tout les outils nécessaire</h1>
-                <section className="CardHolder" >
-                    <Card title="Modifier Enseignant" icone={ModifEns}/>
-                    <p>+ afficher plus</p>
+                <section>
+                    <section className="CardHolder" >
+                        <Card title="Modifier Enseignant" icone={ModifEns} />
+                        <Card title="Modifier Enseignant" icone={ModifEns} />
+                    </section>
+                    <h4>+ afficher plus</h4>
                 </section>
+                
             </div>
             <footer>
                 <section id="secLOGO">

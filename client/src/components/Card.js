@@ -6,7 +6,7 @@ function Card(props){
     return(
         <div className="card">
             <img src={props.icone} alt="icon" />
-            <h1>{props.title}</h1>
+            <h3>{props.title}</h3>
         </div>
     );
     
