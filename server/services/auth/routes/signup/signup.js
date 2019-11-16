@@ -17,6 +17,7 @@ router.post("/", async (req, res) => {
     profileType: req.body.profileType
   };
   validate(inputAccount, async (err, value) => {
+    if (err) throw err;
     await Compte.findOne(
       { username: inputAccount.username },
       async (err, data) => {
@@ -31,7 +32,8 @@ router.post("/", async (req, res) => {
               jwt.sign(
                 {
                   id: user._id,
-                  isAdmin: user.isAdmin
+                  isAdmin: user.isAdmin,
+                  profileId: user.profileId
                 },
                 config.get("jwtSecret"),
                 (err, token) => {
@@ -52,12 +54,14 @@ router.post("/", async (req, res) => {
             });
           });
         } else {
-          res.json({ msg: "User Already Registered" });
+          res.status(400).json({ msg: "User Already Registered" });
         }
       }
     ).catch(err => res.status(400).json({ msg: err.message }));
-  }).catch(err => {
-    res.status(400).json({ msg: err.message });
-  });
+  })
+    .catch(err => {
+      res.status(400).json({ msg: err.message });
+    })
+    .catch(err => res.status(400).json({ msg: err.message }));
 });
 module.exports = router;

@@ -23,7 +23,8 @@ router.post("/", async (req, res) => {
             jwt.sign(
               {
                 id: user._id,
-                isAdmin: user.isAdmin
+                isAdmin: user.isAdmin,
+                profileId: user.profileId
               },
               config.get("jwtSecret"),
               (err, token) => {
