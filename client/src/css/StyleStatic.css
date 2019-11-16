@@ -6,3 +6,134 @@
 h1 {
     font-size: 7vh;
 }
+
+header {
+    position: absolute;
+    top: 0;
+    background: rgba(0, 0, 0, 0.514);
+    display: grid;
+    grid-template-rows: 10% auto 20%;
+    width: 100%;
+    color: white;
+    height: 100vh;
+}
+
+#fontimage{
+    width: 100%;
+    height: 100vh;
+}
+
+.nav{
+    color: white;
+    width: 100%;
+    display: grid ;
+    grid-template-columns: 10%  75% 15%; 
+}
+
+.esi {
+    height: 100%;
+    align-self: center;
+    margin: auto;
+}
+
+.nav h2 {
+    font-size: 200%;
+    text-align: left;
+    align-self: center;
+}
+
+.nav button{
+    align-self: center;  
+    margin: auto;
+    padding: 5%;
+    
+    background: linear-gradient(269deg, #ff8800, #f8d50f);
+    background-size: 400% 400%;
+    animation: GradientAnim 3s ease infinite;
+}
+
+button{
+    color : white;
+    font-size: 20px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.16);
+    background-image: linear-gradient(to left, #cebf3a, #eca500);
+    cursor: pointer;
+}
+
+.centralText{
+
+    display: block;
+    margin: auto;
+    width: 100%;
+}
+
+.MainTXT{
+    padding-top: 2%;
+}
+
+.light{
+    font-weight: lighter;
+    padding-bottom: 2%;
+}
+
+.outilico{
+    height: 100px;
+}
+
+.DetailSection{
+    margin: 0;
+}
+
+.DetailSection button {
+    font-size: 32px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+.DetailSection h3{
+    margin-bottom: 2%;
+}
+
+
+
+
+
+.floating{
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes floating {
+    from { transform: translate(0,  0px); }
+    65%  { transform: translate(0, 10px); }
+    to   { transform: translate(0, -0px); }    
+}
+
+@-webkit-keyframes GradientAnim {
+    0%{background-position:67% 0%}
+    50%{background-position:34% 100%}
+    100%{background-position:67% 0%}
+}
+@-moz-keyframes GradientAnim {
+    0%{background-position:67% 0%}
+    50%{background-position:34% 100%}
+    100%{background-position:67% 0%}
+}
+@-o-keyframes GradientAnim {
+    0%{background-position:67% 0%}
+    50%{background-position:34% 100%}
+    100%{background-position:67% 0%}
+}
+@keyframes GradientAnim {
+    0%{background-position:67% 0%}
+    50%{background-position:34% 100%}
+    100%{background-position:67% 0%}
+}

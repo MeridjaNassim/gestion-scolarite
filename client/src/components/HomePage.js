@@ -19,20 +19,23 @@ function HomePage(){
 
     return(
         <div>
+            <img id="fontimage" src={HomeImage} alt="Scola" />
             <header>
-                <img src={HomeImage} alt="Scola"/>
-            <nav>
-                <img src={esiLOGO} alt="Scolarité" className="esi"/>
-                <h2>Scolarité web app</h2>
-                <button>Login</button>
-            </nav>
-                <img src={outils} alt="Outils"></img>
-                <h1>Des outils indispensables</h1>
-                <h2>pour la scolarité</h2>
-                <h3>pour une fluidité <br />et une facilité sanglante</h3>
-
-                <p>Plus de details</p>
-                <button>></button>
+                <div className="nav">
+                    <img src={esiLOGO} alt="Scolarité" className="esi"/>
+                    <h2>| Scolarité web app</h2>
+                    <button className="Login">Se Connecter</button>
+                </div>
+                <div className="centralText">
+                    <img className="outilico floating" src={outils} alt="Outils"></img>
+                    <h1 className="MainTXT">Des outils indispensables</h1>
+                    <h1 className="light">pour la scolarité</h1>
+                    <h2 className="light">Automatisé et facile à utiliser</h2>
+                </div>
+                <div className="DetailSection">
+                    <h3 >Plus de details</h3>
+                    <button className="floating">v</button>
+                </div>
             </header>
             <div className="HomeGestionDescription">
                 <h1>Gestion de scolarité</h1>
