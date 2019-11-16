@@ -39,7 +39,12 @@ function HomePage(){
             </header>
             <div className="HomeGestionDescription">
                 <h1>Gestion de scolarité</h1>
-                <p>text</p>
+                <p>Automatiser le traitement de l’information est une <br/>
+                solution inévitable, c’est pour cela que nous avons opté pour <br/>
+                une application web accessible par tous les acteurs <br/>
+                principaux de l’Établissement avec une interface et des <br/>
+                fonctionnalités accessible et spécifique à chacun, permettant <br/>
+                une gestion meilleure et un travail cadré sans risque</p>
                 <img src={DesImage} alt="Gestion-Scolarité"/>
             </div>
             <div className="HomeToutOutils">

@@ -137,3 +137,40 @@ button{
     50%{background-position:34% 100%}
     100%{background-position:67% 0%}
 }
+
+
+.HomeGestionDescription{
+    height: 80vh;
+    display: grid;
+    grid-template-columns: 64% 36%; 
+    grid-template-rows: 30% 70%;
+    margin: 10%;
+}
+
+.HomeGestionDescription h1{
+    grid-row : 1 ;
+    grid-column: 1 / span  2;
+    margin: auto;
+}
+
+.HomeGestionDescription img {
+    grid-row: 2;
+    grid-column: 2 ;
+    width: 60%;
+    margin: auto;
+    box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.16);
+}
+
+.HomeGestionDescription p{
+    grid-row: 2;
+    grid-column: 1;
+      color: #686868;
+    font-size: 30px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.23;
+  margin: auto;
+  text-align: left;
+
+}
