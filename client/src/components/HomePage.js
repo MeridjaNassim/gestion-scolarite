@@ -9,6 +9,7 @@ import "../css/StyleStatic.css" ;
 //images
 import HomeImage from '../assets/scolarité-ado.jpg';
 import DesImage from '../assets/file-20181211-76974-1vep43e.jpg';
+import footerimg from '../assets/footeresi.png';
 
 //icons
 import ModifEns from '../assets/teacher.svg';
@@ -49,7 +50,7 @@ function HomePage(){
             </header>
             <div id="scrollto" className="HomeGestionDescription">
                 <h1>Gestion de scolarité</h1>
-                <p>Automatiser le traitement de l’information est une <br/>
+                <p> &emsp;&emsp;Automatiser le traitement de l’information est une <br/>
                 solution inévitable, c’est pour cela que nous avons opté pour <br/>
                 une application web accessible par tous les acteurs <br/>
                 principaux de l’Établissement avec une interface et des <br/>
@@ -58,7 +59,7 @@ function HomePage(){
                 <img src={DesImage} alt="Gestion-Scolarité"/>
             </div>
             <div className="HomeToutOutils">
-                <h1>Tout les outils nécessaire</h1>
+                <h1>Tout les outils nécessaires</h1>
                 <section className="HTOContainer">
                     <section className="CardHolder">
                         <Card title="Modifier Enseignant" icone={ModifEns} />
@@ -72,25 +73,15 @@ function HomePage(){
                 
             </div>
             <footer>
-                <section id="secLOGO">
-                    <img src={esiLOGO} alt="esiSCO" />
-                    <h2>SCO</h2>
-                </section>
-                <section id="secRights">
+                <section className="secProb">
+                    <p>Problème ? <br />Contactez L'adminisrateur :<br />AdminSCO@esi.dz</p>
+                </section >
+                <section className="secRights">
                     <p>Scolarité Web App 2019 Tout droit réservé sous license ESI</p>
                     <h3>Réalisé par</h3>
                     <p>Meridja Abdallah Nassim<br/>Boudis Mohamed Abdelmadjid<br/>Adjal yacine</p>
                 </section>
-                
-                <section id="secPRob">
-                    <p>Problème ? <br/>Contactez L'adminisrateur :<br/>AdminSCO@esi.dz</p>
-                </section >
-
-                <section id="secESI">
-                    <img src={esiLOGO} alt="esiSCO" />
-                    <p>école nationale supérieure<br />d'informatique<br />Alger Ouedsmar</p>
-                </section>
-
+                <img className="fimg" src={footerimg} alt="scola" />
             </footer>
         </div>
     );
