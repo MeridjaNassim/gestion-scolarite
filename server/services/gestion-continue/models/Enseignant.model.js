@@ -1,4 +1,4 @@
-const db = require("../../db/db");
+const db = require("../db/db");
 const mongoose = db.mongoose;
 const Schema = mongoose.Schema;
 const String = Schema.Types.String;
@@ -15,7 +15,10 @@ const moduleSchema = Schema({
 });
 const enseignantSchema = Schema(
   {
-    _id: ObjectID,
+    _id: {
+      type : ObjectID,
+      auto : true
+    },
     nom: String,
     prenom: String,
     nss: Number,
