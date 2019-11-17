@@ -101,9 +101,6 @@ button{
 }
 
 
-
-
-
 .floating{
     animation-name: floating;
     animation-duration: 3s;
@@ -176,30 +173,28 @@ button{
 }
 
 .HomeToutOutils{
-    display: grid;
-    height: 80vh;
-    grid-template-rows: 30% auto;
+    display: grid ;
+    grid-template-rows:30% auto ; 
     margin : 5%;
 }
 
 .HomeToutOutils h1 {
-    grid-row: 1;
     margin: auto;
 }
 
-.HomeToutOutils section  {
-    grid-row: 2;
+.HTOContainer {
     display: grid;
-    grid-template-rows: auto  5%;
-    height: 50vh;
-    width: 100%;
+    grid-template-rows: auto 15%;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.068);
-    margin: auto;
+    margin: 2%;
+
 }
 
-.HomeToutOutils section h4  {
-    grid-row: 2;
+.HTOContainer h4  {
     color: #686868;
+    vertical-align: middle;
+    text-align: center;
+    padding: 2%;
 }
 
 
@@ -207,6 +202,10 @@ button{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    align-items: center;
+    margin: 2%;
+    align-self: center;
+
 }
 
 .card {
@@ -216,6 +215,7 @@ button{
     height: 314px;
     box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.08);
     color: white;
+    margin : 1%;
     
 }
 
@@ -225,5 +225,6 @@ button{
 }
 
 .card h3 {
+    color: black;
     margin  :0;
 }

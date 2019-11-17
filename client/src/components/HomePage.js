@@ -7,13 +7,17 @@ import Card from './Card';
 import "../css/StyleStatic.css" ;
 
 //images
-import HomeImage from '../Resources/scolarité-ado.jpg';
-import DesImage from '../Resources/file-20181211-76974-1vep43e.jpg';
+import HomeImage from '../assets/scolarité-ado.jpg';
+import DesImage from '../assets/file-20181211-76974-1vep43e.jpg';
 
 //icons
-import ModifEns from '../Resources/teacher.svg';
-import esiLOGO from '../Resources/esi.png';
-import outils from '../Resources/pencil-case.svg';
+import ModifEns from '../assets/teacher.svg';
+import esiLOGO from '../assets/esi.png';
+import outils from '../assets/pencil-case.svg';
+import these from '../assets/open-book.svg';
+import calendar from '../assets/calendar.svg';
+import study from '../assets/study.svg';
+import classroom from '../assets/classroom.svg';
 
 //scrolling function
 function ScrollDown() {
@@ -55,10 +59,13 @@ function HomePage(){
             </div>
             <div className="HomeToutOutils">
                 <h1>Tout les outils nécessaire</h1>
-                <section>
-                    <section className="CardHolder" >
+                <section className="HTOContainer">
+                    <section className="CardHolder">
                         <Card title="Modifier Enseignant" icone={ModifEns} />
-                        <Card title="Modifier Enseignant" icone={ModifEns} />
+                        <Card title="Gestion des thèses" icone={these} />
+                        <Card title="Emploi du temps" icone={calendar} />
+                        <Card title="Affectation spécialité" icone={study} />
+                        <Card title="Absences" icone={classroom} />
                     </section>
                     <h4>+ afficher plus</h4>
                 </section>
