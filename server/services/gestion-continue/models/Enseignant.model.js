@@ -16,12 +16,12 @@ const moduleSchema = Schema({
 const enseignantSchema = Schema(
   {
     _id: {
-      type : ObjectID,
-      auto : true
+      type: ObjectID,
+      auto: true
     },
     nom: String,
     prenom: String,
-    nss: Number,
+    nss: String,
     date_naissance: Date,
     lieu_naissance: String,
     date_recrutement: Date,
