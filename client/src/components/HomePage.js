@@ -1,7 +1,8 @@
-import React from "react";
+import React,{useState} from "react";
 
 //Components
 import Card from './Card';
+import Login from "./Login";
 
 //Stylesheet
 import "../css/StyleStatic.css" ;
@@ -25,29 +26,39 @@ function ScrollDown() {
     var element = document.querySelector("#scrollto");
     element.scrollIntoView({ behavior: 'smooth'});
   }
-          
+        
+
+
 function HomePage(){
+ 
+    const [showLogin,setShowLogin]= useState(false);
 
     return(
         <div>
-            <img id="fontimage" src={HomeImage} alt="Scola" />
-            <header>
-                <div className="nav">
-                    <img src={esiLOGO} alt="Scolarité" className="esi"/>
-                    <h2>| Scolarité web app</h2>
-                    <button className="Login">Se Connecter</button>
-                </div>
-                <div className="centralText">
-                    <img className="outilico floating" src={outils} alt="Outils"></img>
-                    <h1 className="MainTXT">Des outils indispensables</h1>
-                    <h1 className="light">pour la scolarité</h1>
-                    <h2 className="light">Automatisé et facile à utiliser</h2>
-                </div>
-                <div className="DetailSection">
-                    <h3 >Plus de details</h3>
-                    <button onClick={ScrollDown} className="floating">v</button>
-                </div>
-            </header>
+            <img id="fontimage" src={HomeImage} alt="Scola" /> 
+            
+                {
+                    showLogin ? <Login onCancel={e=>setShowLogin(false)} /> :
+                    <header>
+                    <div className="nav">
+                        <img src={esiLOGO} alt="Scolarité" className="esi" />
+                        <h2>| Scolarité web app</h2>
+                        <button onClick={e => setShowLogin(true)} className="Login">Se Connecter</button>
+                    </div>
+
+                    <div className="centralText">
+                        <img className="outilico floating" src={outils} alt="Outils"></img>
+                        <h1 className="MainTXT">Des outils indispensables</h1>
+                        <h1 className="light">pour la scolarité</h1>
+                        <h2 className="light">Automatisé et facile à utiliser</h2>
+                    </div>
+                    <div className="DetailSection">
+                        <h3 >Plus de details</h3>
+                        <button onClick={ScrollDown} className="floating">v</button>
+                    </div>
+
+                    </header>
+                }
             <div id="scrollto" className="HomeGestionDescription">
                 <h1>Gestion de scolarité</h1>
                 <p> &emsp;&emsp;Automatiser le traitement de l’information est une <br/>
