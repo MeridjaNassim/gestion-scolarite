@@ -9,23 +9,22 @@ const memoireSchema = Schema(
       type: ObjectID,
       auto: true
     },
-    nom: {
+    titre: {
       type: String,
-      required: true,
-      index: true
+      required: true
     },
     branche: String,
     description: String,
-    date_creation: {
-      type: Date,
-      default: Date.now
-    },
-    proprietaire_ids: [ObjectID],
+    promoteur_ids: [ObjectID],
     encadreur_ids: [ObjectID],
     etudiants_ids: [ObjectID],
     liens: [String]
   },
   {
+    timestamps: {
+      createdAt: "date_creation",
+      updateAt: "date_maj"
+    },
     collection: "memoires"
   }
 );

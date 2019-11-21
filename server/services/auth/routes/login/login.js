@@ -28,6 +28,7 @@ router.post("/", async (req, res) => {
               },
               config.get("jwtSecret"),
               (err, token) => {
+                if (err) res.status(400).json({ msg: err.message });
                 const userAccess = {
                   token: token,
                   user: {
@@ -39,7 +40,7 @@ router.post("/", async (req, res) => {
                     profileType: user.profileType
                   }
                 };
-                res.status(200).json(userAccess);
+                res.status(200).json({ data: userAccess });
               }
             );
           } else {

@@ -24,7 +24,7 @@ router.post("/add", (req, res, next) => {
     res.status(400).send("Some thing went wrong ");
   }
 });
-router.put("/update", (req, res, next) => {
+router.patch("/update", (req, res, next) => {
   const query = {
     _id: req.query.id
   };

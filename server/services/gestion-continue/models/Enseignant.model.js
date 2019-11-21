@@ -32,7 +32,13 @@ const enseignantSchema = Schema(
     modules: [moduleSchema],
     postes: [String]
   },
-  { collection: "enseignants" }
+  {
+    collection: "enseignants",
+    timestamps: {
+      createdAt: "date_creation",
+      updateAt: "date_maj"
+    }
+  }
 );
 const Enseignant = mongoose.model("Enseignant", enseignantSchema);
 exports.Enseignant = Enseignant;
