@@ -13,7 +13,7 @@ import DesImage from '../assets/file-20181211-76974-1vep43e.jpg';
 import footerimg from '../assets/footeresi.png';
 
 //icons
-import ModifEns from '../assets/teacher.svg';
+//import ModifEns from '../assets/teacher.svg';
 import esiLOGO from '../assets/esi.png';
 import outils from '../assets/pencil-case.svg';
 import these from '../assets/open-book.svg';
@@ -27,7 +27,6 @@ function ScrollDown() {
     element.scrollIntoView({ behavior: 'smooth'});
   }
         
-
 
 function HomePage(){
  
@@ -61,25 +60,24 @@ function HomePage(){
                 }
             <div id="scrollto" className="HomeGestionDescription">
                 <h1>Gestion de scolarité</h1>
-                <p> &emsp;&emsp;Automatiser le traitement de l’information est une <br/>
-                solution inévitable, c’est pour cela que nous avons opté pour <br/>
-                une application web accessible par tous les acteurs <br/>
-                principaux de l’Établissement avec une interface et des <br/>
-                fonctionnalités accessible et spécifique à chacun, permettant <br/>
+                <p>Automatiser le traitement de l’information est une 
+                solution inévitable, c’est pour cela que nous avons opté pour 
+                une application web accessible par tous les acteurs 
+                principaux de l’Établissement avec une interface et des
+                fonctionnalités accessible et spécifique à chacun, permettant
                 une gestion meilleure et un travail cadré sans risque</p>
-                <img src={DesImage} alt="Gestion-Scolarité"/>
+                <img className=" floating" src={DesImage} alt="Gestion-Scolarité"/>
             </div>
             <div className="HomeToutOutils">
                 <h1>Tout les outils nécessaires</h1>
                 <section className="HTOContainer">
-                    <section className="CardHolder">
-                        <Card title="Modifier Enseignant" icone={ModifEns} />
-                        <Card title="Gestion des thèses" icone={these} />
-                        <Card title="Emploi du temps" icone={calendar} />
-                        <Card title="Affectation spécialité" icone={study} />
-                        <Card title="Absences" icone={classroom} />
+                    <section className="CardHolder floating">
+                        <Card title="Entrée des étudiants" icone={classroom} />
+                        <Card title="Gestion continue" icone={these} />
+                        <Card title="Planification" icone={calendar} />
+                        <Card title="Gestion du parcours" icone={study} />
                     </section>
-                    <h4>+ afficher plus</h4>
+                    <h4>Chacun dispose de plusieurs fonctionnalités</h4>
                 </section>
                 
             </div>
