@@ -1,8 +1,8 @@
 import React from "react";
+import Form from "./Form"
 import "../css/StyleStatic.css";
 import "../css/Login.css";
 
-var errorMes ="";
 
 function Login(props) {
 
@@ -14,12 +14,7 @@ function Login(props) {
                     Attention : chaque utilisateur dispose d'une interface
                     propre a celui-ci selon son type
                 </p>
-                <form className="Form">    
-                    <input className="input" type="text" name="username" value="Nom utilisateur"/>
-                    <input className="input" type="text" name="password" value="Mot de passe" />
-                    <p>{errorMes}</p>
-                    <input className="But floating" type="submit" value="Suivant" />
-                </form>
+                <Form setlogin={props.setlogin} />
             </div>
             <button className="AnnulerBut" onClick={(e) => { props.onCancel(e) }}>Annuler</button>
         </div>

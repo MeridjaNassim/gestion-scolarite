@@ -1,13 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import HomePage from "./HomePage";
 //import Login from "./Login";
 import "../css/App.css";
 
 
+
 function App() {
+
+  const [Loged,setLoged] = useState(false);
+
   return (
     <div className="App">
-      <HomePage />
+      {
+        !Loged ? <HomePage setlogin={setLoged} /> : <div></div>
+      }
     </div>
   );
 }

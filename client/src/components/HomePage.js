@@ -28,7 +28,7 @@ function ScrollDown() {
   }
         
 
-function HomePage(){
+function HomePage(props){
  
     const [showLogin,setShowLogin]= useState(false);
 
@@ -37,7 +37,7 @@ function HomePage(){
             <img id="fontimage" src={HomeImage} alt="Scola" /> 
             
                 {
-                    showLogin ? <Login onCancel={e=>setShowLogin(false)} /> :
+                    showLogin ? <Login setlogin={props.setlogin} onCancel={e=>setShowLogin(false)} /> :
                     <header>
                     <div className="nav">
                         <img src={esiLOGO} alt="Scolarité" className="esi" />
