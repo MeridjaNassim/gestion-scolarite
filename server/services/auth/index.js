@@ -17,7 +17,7 @@ authService.get("/", (req, res) => {
 
 /// checks for login access
 
-const port = 3000;
+const port = 3001;
 authService.listen(port, () => {
   console.log(`Authentification Service listening on port ${port}`);
 });

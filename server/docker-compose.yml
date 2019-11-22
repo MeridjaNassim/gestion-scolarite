@@ -1,0 +1,31 @@
+version: "3"
+services:
+  auth:
+    container_name: gestion-scolarite-auth
+    restart: always
+    build: ./services/auth
+    ports:
+      - "3001:3001"
+    links:
+      - mongo
+  gcontinue:
+    container_name: gestion-scolarite-gcontinue
+    restart: always
+    build: ./services/gestion-continue
+    ports:
+      - "3002:3002"
+    links:
+      - mongo
+  plannification:
+    container_name: gestion-scolarite-plannification
+    restart: always
+    build: ./services/plannification
+    ports:
+      - "3003:3003"
+    links:
+      - mongo
+  mongo:
+    container_name: mongo
+    image: mongo
+    ports:
+      - "27017:27017"
