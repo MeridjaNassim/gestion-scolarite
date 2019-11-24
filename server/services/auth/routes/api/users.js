@@ -7,20 +7,27 @@ const { Compte } = require("../../models/Compte.model");
 /// @desc GET all users in db
 /// @access public
 router.get("/", (req, res) => {
-  Compte.find((err, data) => {
-    res.header("Content-Type", "application/json");
-    res.send(JSON.stringify(data, null, 4));
-  });
+  Compte.find({})
+    .then(data => {
+      if (data != null) res.status(200).json(data);
+      else res.status(404).json(null);
+    })
+    .catch(err => {
+      res.status(505).send(err.message);
+    });
 });
 /// @route GET api/users/username
 /// @desc GET one user whos username == username
 /// @access public
 router.get("/:username", async (req, res) => {
-  await Compte.findOne({ username: req.params.username }, (err, data) => {
-    if (err) throw err;
-    res.header("Content-Type", "application/json");
-    res.send(JSON.stringify(data, null, 4));
-  });
+  Compte.findOne({ username: req.params.username })
+    .then(data => {
+      if (data != null) res.status(200).json(data);
+      else res.status(200).json(null);
+    })
+    .catch(err => {
+      res.status(505).send(err.message);
+    });
 });
 
 module.exports = router;

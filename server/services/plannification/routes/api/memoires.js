@@ -9,8 +9,7 @@ router.get("/", (req, res, next) => {
   const query = req.query;
   Memoire.find(query)
     .then(data => {
-      res.header("Content-Type", "application/json");
-      res.send(JSON.stringify(data, null, 4));
+      res.status(200).json(data);
     })
     .then(val => next())
     .catch(err => res.status(400).json({ msg: err.message }));
@@ -42,15 +41,15 @@ router.post("/add", (req, res, next) => {
 /// @access public
 router.delete("/delete", (req, res, next) => {
   const query = req.query;
-  if (!query) res.status(200).json({ msg: "No Item deleted" });
+  if (!query) res.status(200).json(null);
   else {
     if (query.count == undefined) {
-      Memoire.deleteOne(query)
-        .then(result => res.status(200).json(result))
+      Memoire.findOneAndDelete(query)
+        .then(doc => res.status(200).json(doc))
         .catch(err => res.status(400).json({ msg: err.message }));
     } else {
       Memoire.deleteMany(query, query.count)
-        .then(result => res.status(200).json(result))
+        .then(doc => res.status(200).json(doc))
         .catch(err => res.status(400).json({ msg: err.message }));
     }
   }

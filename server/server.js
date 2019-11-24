@@ -1,5 +1,4 @@
 const express = require("express");
-const db = require("./services/db/db");
 const compteModel = require("./services/db/models/Compte");
 const mongoose = require("mongoose");
 /// default variables :

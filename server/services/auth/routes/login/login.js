@@ -40,7 +40,7 @@ router.post("/", async (req, res) => {
                     profileType: user.profileType
                   }
                 };
-                res.status(200).json({ data: userAccess });
+                res.status(200).json(userAccess);
               }
             );
           } else {

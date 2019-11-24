@@ -38,16 +38,14 @@ router.post("/", async (req, res) => {
                 config.get("jwtSecret"),
                 (err, token) => {
                   res.json({
-                    data: {
-                      token: token,
-                      user: {
-                        id: user._id,
-                        isAdmin: user.isAdmin,
-                        profileId: user.profileId,
-                        username: user.username,
-                        email: user.email,
-                        profileType: user.profileType
-                      }
+                    token: token,
+                    user: {
+                      id: user._id,
+                      isAdmin: user.isAdmin,
+                      profileId: user.profileId,
+                      username: user.username,
+                      email: user.email,
+                      profileType: user.profileType
                     }
                   });
                 }

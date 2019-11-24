@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-mongoose.connect("mongodb://mongo:27017/gestionscolarite", {
+mongoose.connect("mongodb://database:27017/gestionscolarite", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useCreateIndex: true

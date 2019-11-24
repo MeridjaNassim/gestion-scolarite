@@ -1,7 +1,9 @@
 const mongoose = require("mongoose");
 
-mongoose.connect("mongodb://mongo:27017/gestionscolarite", {
-  useNewUrlParser: true
+mongoose.connect("mongodb://database:27017/gestionscolarite", {
+  useNewUrlParser: true,
+  useCreateIndex: true,
+  useUnifiedTopology: true
 });
 
 const connection = mongoose.connection;
