@@ -3,7 +3,8 @@ import HomePage from "./HomePage";
 //import Login from "./Login";
 import "../css/App.css";
 
-
+//import ThesDash from "./ThesDash";
+import EnsDash from "./EnsDash";
 
 function App() {
 
@@ -12,7 +13,7 @@ function App() {
   return (
     <div className="App">
       {
-        !Loged ? <HomePage setlogin={setLoged} /> : <div></div>
+        !Loged ? <HomePage setlogin={setLoged} /> : <EnsDash />
       }
     </div>
   );
