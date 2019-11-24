@@ -1,25 +1,32 @@
-var db = require("../../db/db");
+var db = require("../db/db");
 const mongoose = db.mongoose;
 const Schema = mongoose.Schema;
 const String = Schema.Types.String;
-const Number = Schema.Types.Number;
-const Date = Schema.Types.Date;
 const ObjectID = Schema.Types.ObjectId;
-
 const memoireSchema = Schema(
   {
-    _id: ObjectID,
-    nom: String,
+    _id: {
+      type: ObjectID,
+      auto: true
+    },
+    titre: {
+      type: String,
+      required: true
+    },
     branche: String,
     description: String,
-    proprietaire_ids: [ObjectID],
+    promoteur_ids: [ObjectID],
     encadreur_ids: [ObjectID],
     etudiants_ids: [ObjectID],
     liens: [String]
   },
   {
+    timestamps: {
+      createdAt: "date_creation",
+      updateAt: "date_maj"
+    },
     collection: "memoires"
   }
 );
 const Memoire = mongoose.model("Memoire", memoireSchema);
-exports.Mermoire = Memoire;
+exports.Memoire = Memoire;

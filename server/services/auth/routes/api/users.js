@@ -23,10 +23,4 @@ router.get("/:username", async (req, res) => {
   });
 });
 
-/// adds a user in the db
-router.post("/", async (req, res) => {
-  res.json(req.body);
-  await newUser(req.body.username, req.body.email, req.body.password);
-  res.json(req.body);
-});
 module.exports = router;

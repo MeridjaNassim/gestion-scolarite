@@ -1,10 +1,14 @@
 const express = require("express");
-const bodyparser = require("body-parser");
 const planService = express();
-const port = 3003;
+const memoiresRoute = require("./routes/api/memoires");
+/// middlware  :
+planService.use(express.json());
+planService.use("/api/memoires", memoiresRoute);
+///
 
 planService.get("/", (req, res) => res.send("Plannification Service!"));
 
+const port = 3003;
 planService.listen(port, () =>
   console.log(`Plannification Service listening on port ${port}`)
 );

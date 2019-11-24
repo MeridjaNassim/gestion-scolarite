@@ -10,7 +10,7 @@ const connection = mongoose.connection;
 connection.on("error", console.error.bind(console, "connection error : "));
 connection.once("open", () => {
   console.log("====================================");
-  console.log("Connected to the db");
+  console.log("Connected Auth to DB");
   console.log("====================================");
 });
 

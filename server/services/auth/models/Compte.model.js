@@ -61,16 +61,20 @@ function validateCompte(compte, callback) {
     username: joi
       .string()
       .min(3)
-      .max(50),
+      .max(50)
+      .required(),
     email: joi
       .string()
       .min(5)
       .max(255)
-      .email(),
+      .email()
+      .required(),
     password: joi
       .string()
       .min(3)
       .max(255)
+      .required(),
+    profileType: joi.string()
   };
   return joi.validate(compte, schema, callback);
 }

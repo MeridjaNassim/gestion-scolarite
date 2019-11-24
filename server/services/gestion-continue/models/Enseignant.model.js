@@ -1,4 +1,4 @@
-const db = require("../../db/db");
+const db = require("../db/db");
 const mongoose = db.mongoose;
 const Schema = mongoose.Schema;
 const String = Schema.Types.String;
@@ -15,10 +15,13 @@ const moduleSchema = Schema({
 });
 const enseignantSchema = Schema(
   {
-    _id: ObjectID,
+    _id: {
+      type: ObjectID,
+      auto: true
+    },
     nom: String,
     prenom: String,
-    nss: Number,
+    nss: String,
     date_naissance: Date,
     lieu_naissance: String,
     date_recrutement: Date,
@@ -29,7 +32,13 @@ const enseignantSchema = Schema(
     modules: [moduleSchema],
     postes: [String]
   },
-  { collection: "enseignants" }
+  {
+    collection: "enseignants",
+    timestamps: {
+      createdAt: "date_creation",
+      updateAt: "date_maj"
+    }
+  }
 );
 const Enseignant = mongoose.model("Enseignant", enseignantSchema);
 exports.Enseignant = Enseignant;
