@@ -16,20 +16,21 @@ class ThesDash extends React.Component {
     render() {
         return (
             <div className ="divDash divThese">
-                <section className="LeftForm">
-                    <form action="">
-                        <input name="Title" type="text" placeholder="title"/>
-                        <input name="Branche" type="text" placeholder="title"/>
-                        <input name="Encadreur" type="text" placeholder="title"/>
-                        <div className="EtudContainer">
-                        </div>
-                        <textarea name="links">
+                <section >
+                    <form className="LeftForm" action="">
+                        <h2>Ajouter une thèse</h2>
+                        
+                        <input name="Title" type="text" placeholder="Titre"/>
+                        <input name="Branche" type="text" placeholder="Branche"/>
+                        <input name="Encadreur" type="text" placeholder="Encadreur"/>
+                        <input name="Etudiants" type="text" placeholder="Etudiants"/>
+                        <textarea name="links" placeholder="Liens lié">
 
                         </textarea>
                     </form>
                 </section>
                 <section className="RightSide">
-                    <p id="state"></p>
+                    <p id="stateDate">date creation <br/> 12/11/2019</p>
                     <button>
                         Ajouter
                     </button>

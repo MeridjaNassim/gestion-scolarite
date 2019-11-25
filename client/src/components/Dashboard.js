@@ -1,13 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
+import EnsDash from "./EnsDash";
+import ThesDash from "./ThesDash";
+
 
 function Dashboard(){
+    const [ges,setGes] =useState(true);
+
+    //a enlever  juste pour le warning
+    if(1 == 0) setGes(false);
+
     return(
-        <>
-            //Top container
-            //leftConainter
-            // main Body
-            // switch(fonctionality)
-        </>
+        <div className="DashBoard">
+            <section className="LeftDr">
+
+            </section>
+            <section className="TopDraw">
+
+            </section>
+            <div className="mainContainer">
+                {
+                    (!ges) ? <EnsDash /> : <ThesDash />
+                }
+            </div>
+            
+        </div>
     );
 }
 

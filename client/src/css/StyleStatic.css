@@ -64,8 +64,8 @@ button, .But{
     border: none;
     border-radius: 8px;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.16);
-    background-image: linear-gradient(to left, #ff8800, #f8d50f);
-    cursor: pointer;
+    background: linear-gradient(269deg, #ff8800, #f8d50f);
+       cursor: pointer;
 }
 
 button:focus 
