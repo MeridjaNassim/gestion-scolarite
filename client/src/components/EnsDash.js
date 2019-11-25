@@ -7,7 +7,23 @@ class EnsDash extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-
+            Nom : String ,
+            Prenom : String ,
+            DateNaissance : String ,
+            LieuNaissance : String ,
+            Adresse : String ,
+            Telephone : String ,
+            NSS : String ,
+            EtatCivil : String ,
+            Grade : String ,
+            DateRecrutement : String ,
+            Postes : String ,
+            Modules : [{
+                name: String ,
+                cours : Boolean ,
+                Section : String ,
+                Groupe : String ,
+            }] ,
         };
     }
 
