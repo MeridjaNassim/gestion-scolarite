@@ -6,36 +6,26 @@ services:
     build: ./services/auth
     ports:
       - "3001:3001"
-    links:
-      - database
   gcontinue:
     container_name: gestion-scolarite-gcontinue
     restart: always
     build: ./services/gestion-continue
     ports:
       - "3002:3002"
-    links:
-      - database
   plannification:
     container_name: gestion-scolarite-plannification
     restart: always
     build: ./services/plannification
     ports:
       - "3003:3003"
-    links:
-      - database
   database:
     container_name: database
     image: mongo
     ports:
-      - "27017:27017"
+      - "27018:27017"
   gateway:
     container_name: gateway-api
     restart: always
     build: ./gateway
     ports:
       - "8080:8080"
-    links:
-      - auth
-      - gcontinue
-      - plannification

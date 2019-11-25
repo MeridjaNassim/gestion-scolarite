@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const apiAdapter = require("./apiAdapter");
-const BASE_URL = "http://gestion-scolarite-plannification:3003";
+const BASE_URL = "http://plannification:3003";
 const api = apiAdapter(BASE_URL);
 
 router.get("/api/memoires", (req, res) => {

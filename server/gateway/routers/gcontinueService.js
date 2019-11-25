@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const apiAdapter = require("./apiAdapter");
-const BASE_URL = "http://gestion-scolarite-gcontinue:3002";
+const BASE_URL = "http://gcontinue:3002";
 const api = apiAdapter(BASE_URL);
 
 router.get("/api/enseignants", (req, res) => {
