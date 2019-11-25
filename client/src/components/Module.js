@@ -9,7 +9,7 @@ function Module(props){
     //Module.section ..
     return(
 
-        <div className="Module">
+        <div className="Modul">
             <h3>{Mod.name}</h3>
             {
                 cours ? <label>section : {Mod.section}</label> : <label>Groupe: {Mod.groupe}</label> 

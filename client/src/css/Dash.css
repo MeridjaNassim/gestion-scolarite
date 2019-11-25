@@ -110,5 +110,86 @@ textarea{
 
 /*EnsDash Css*/
 .divEns{
+    height: 92%;
+    display: grid;
+    grid-template-rows: 10% auto; 
+    color: #9F9F9F;  
+}
+
+.header{
+    width: 100%;
+    height: 100%;
+    display: grid ;
+    grid-template-columns: auto 10%;
+    margin : auto;
+    vertical-align: middle;
+
+}
+.EnsSelection{
+    margin: auto;
+}
+
+
+.EnsSelection input{
+    margin: auto;
+}
+
+
+.EnsSelection button{
+    margin: auto;
+}
+
+.EnsCard{
+    display: grid ;
+    grid-template-rows: 40% 60%;
+}
+
+.PersonalInfo{
+    display: grid ;
+    grid-template-columns: 15% auto; 
+
+}
+
+.PersonalInfo img{
+    height: 100%;
+    width: 100%;
+    margin: auto;
+}
+.infoHolder{
+    display: inline-flex;
+    width: 100%;
+    height: 100%;
+
+}
+
+.ProfessionInfo{
+    display : flex;
+    margin: auto;
+
+}
+/* info style */
+.infoItem{
     
+    display: flex ;
+    flex-direction: row;
+    margin: 1%;
+}
+
+.infoItem h3{
+
+}
+
+.infoItem form {
+}
+
+.infoItem form input {
+
+}
+
+/*Module Style*/
+
+.Modul{
+    height: 100% ;
+    background: white ;
+    box-shadow: 0 0 20 rgba(0, 0, 0, 0.16);
 }

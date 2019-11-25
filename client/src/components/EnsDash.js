@@ -21,18 +21,24 @@ class EnsDash extends React.Component {
             Modules : [{
                 name: String ,
                 cours : Boolean ,
-                Section : String ,
-                Groupe : String ,
+                section : String ,
+                groupe : String ,
             }] ,
         };
     }
 
     render() {
+        let Module1 ={
+                name: "Mod1" ,
+                cours : true ,
+                section : "A" ,
+                groupe : null ,
+        }
         return (
             <div className="divDash divEns">
                 <div className="header">
                     <form id="EnsSelection">
-                        <input type="search" name="Ens" id="Ens"/>
+                        <input type="search" name="Ens" id="Ens" placeholder="Selectionez un enseignat" />
                     </form>
                     <button>Enregistrer</button>
                 </div>
@@ -55,7 +61,7 @@ class EnsDash extends React.Component {
                         <Info champ="DateRec" value="" />
                         <div id="Postes"></div>
                         <div id="Modules">
-                            <Module module="" />
+                            <Module module={Module1} />
                         </div>
                     </section>
                 </div>
