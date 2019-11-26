@@ -4,7 +4,7 @@
   "description": "MicroService de gestion de plannification",
   "main": "plannification.js",
   "scripts": {
-    "start": "nodemon plannification.js",
+    "start": "node plannification.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Meridja Nassim",

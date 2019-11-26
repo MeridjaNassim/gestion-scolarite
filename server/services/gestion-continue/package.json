@@ -4,7 +4,7 @@
   "description": "MicroService de la gestion continue",
   "main": "gcontinue.js",
   "scripts": {
-    "start": "nodemon gcontinue.js",
+    "start": "node gcontinue.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Meridja Nassim",
