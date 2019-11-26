@@ -6,4 +6,4 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(router);
 app.get("/", (req, res) => res.send("Gateway for microservices!"));
-app.listen(port, () => console.log(`Example app listening on port ${port}!`));
+app.listen(port, () => console.log(`API Gateway listening on port ${port}!`));

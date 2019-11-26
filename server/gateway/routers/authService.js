@@ -4,6 +4,11 @@ const apiAdapter = require("./apiAdapter");
 const BASE_URL = "http://auth:3001";
 const api = apiAdapter(BASE_URL);
 
+router.get("/authService", (req, res) => {
+  api.get("/").then(resp => {
+    res.send(resp.data);
+  });
+});
 router.get("/api/users", (req, res) => {
   api.get(req.path).then(resp => {
     res.send(resp.data);

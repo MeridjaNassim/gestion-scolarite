@@ -4,6 +4,11 @@ const apiAdapter = require("./apiAdapter");
 const BASE_URL = "http://plannification:3003";
 const api = apiAdapter(BASE_URL);
 
+router.get("/plannificationService", (req, res) => {
+  api.get("/").then(resp => {
+    res.send(resp.data);
+  });
+});
 router.get("/api/memoires", (req, res) => {
   api.get(req.path, { params: req.query }).then(resp => {
     res.send(resp.data);

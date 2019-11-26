@@ -4,6 +4,12 @@ const apiAdapter = require("./apiAdapter");
 const BASE_URL = "http://gcontinue:3002";
 const api = apiAdapter(BASE_URL);
 
+router.get("/gcontinueService", (req, res) => {
+  api.get("/").then(resp => {
+    res.send(resp.data);
+  });
+});
+
 router.get("/api/enseignants", (req, res) => {
   api.get(req.path, { params: req.query }).then(resp => {
     res.send(resp.data);
