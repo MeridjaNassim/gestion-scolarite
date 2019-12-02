@@ -13,7 +13,7 @@ function App() {
   return (
     <div className="App">
       {
-        !Loged ? <HomePage setlogin={setLoged} /> : <Dashboard />
+        Loged ? <HomePage setlogin={setLoged} /> : <Dashboard />
       }
     </div>
   );

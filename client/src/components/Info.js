@@ -5,10 +5,12 @@ function Info(props){
 
     return(
         <div class="infoItem">
-            <h3>{props.champ}</h3>
-            <from>
-                <input type="text" name={props.champ}/>
-            </from>
+            <section>
+                <h3>{props.champ}</h3>
+                <form>
+                    <input type="text" name={props.champ} />
+                </form>
+            </section>
         </div>
     );
 

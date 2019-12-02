@@ -19,7 +19,7 @@ function Dashboard(){
             </section>
             <div className="mainContainer">
                 {
-                    (!ges) ? <EnsDash /> : <ThesDash />
+                    (ges) ? <EnsDash /> : <ThesDash />
                 }
             </div>
             

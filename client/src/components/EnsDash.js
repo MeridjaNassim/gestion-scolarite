@@ -47,13 +47,14 @@ class EnsDash extends React.Component {
                         <img src={pPic} alt="Enseignant"/>
                         <section className="inforHolder">
                             <Info champ="Nom" value="" />
-                            <Info champ="DateNai" value="" />
-                            <Info champ="a" value="" />
-                            <Info champ="Prenom" value="" />
+                            <Info champ="Date de Naissance" value="" />
+                            <Info champ="à" value="" />
+                            <Info champ="Prénom" value="" />
                             <Info champ="Adresse" value="" />
-                            <Info champ="Tel" value="" />
+                            <Info champ="Téléphone" value="" />
                             <Info champ="NSS" value="" />
-                            <Info champ="EtatC" value="" />
+                            <Info champ="Etat Civil" value="" />
+                            <div className="infoItem"></div>
                         </section>
                     </section>
                     <section className="ProfessionInfo">
