@@ -29,7 +29,7 @@ class EnsDash extends React.Component {
 
     render() {
         let Module1 ={
-                name: "Mod1" ,
+                name: "SYC 1" ,
                 cours : true ,
                 section : "A" ,
                 groupe : null ,
@@ -58,9 +58,9 @@ class EnsDash extends React.Component {
                         </section>
                     </section>
                     <section className="ProfessionInfo">
-                        <Info champ="Grade" value="" />
-                        <Info champ="DateRec" value="" />
-                        <div id="Postes"></div>
+                        <Info id="Grade" champ="Grade" value="" />
+                        <Info id="DateRec" champ="DateRec" value="" />
+                        <Info id="Postes" champ="Postes" value=""/>
                         <div id="Modules">
                             <Module module={Module1} />
                         </div>

@@ -162,11 +162,6 @@ textarea{
     height: 100%;
 }
 
-.ProfessionInfo{
-    display : flex;
-    margin: auto;
-
-}
 /* info style */
 .infoItem{ 
     display: inline-block;
@@ -186,8 +181,58 @@ textarea{
 
 /*Module Style*/
 
+
+.ProfessionInfo{
+    display : grid;
+    grid-template-rows: 2;
+    grid-template-columns: 2;
+    margin: 2%;
+    height: 90%;
+    width: 90%;
+
+}
+
+.ProfessionInfo * {
+    width: 100%;
+    margin-right :auto;
+}
+
+
+#Grade {
+    grid-row: 1;
+    grid-column: 1;
+}
+
+#DateRec {
+    grid-row: 2;
+    grid-column: 1;
+}
+
+#Postes {
+    grid-row: 1;
+    grid-column: 2;
+}
+#Modules{
+    grid-row: 2;
+    grid-column: 2;
+}
+
+#Modules{
+    display: inline-block;
+    background: #F2F2F2 ;
+    border-radius: 5px;
+    height: 50%;
+
+}
+
 .Modul{
-    height: 100% ;
+    display: grid ;
+    grid-template-rows: 50% auto;
+    margin: 1%;
+    padding-left: 2%;
+    padding-right: 2%;
     background: white ;
-    box-shadow: 0 0 20 rgba(0, 0, 0, 0.16);
+    height: 80%;
+    width: max-content;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.16);
 }
