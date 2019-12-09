@@ -13,7 +13,6 @@ import DesImage from '../assets/file-20181211-76974-1vep43e.jpg';
 import footerimg from '../assets/footeresi.png';
 
 //icons
-//import ModifEns from '../assets/teacher.svg';
 import esiLOGO from '../assets/esi.png';
 import outils from '../assets/pencil-case.svg';
 import these from '../assets/open-book.svg';

@@ -1,29 +1,41 @@
-import React, { useState } from "react";
+import React  from "react"; 
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import EnsDash from "./EnsDash";
 import ThesDash from "./ThesDash";
-
+import esiLOGO from '../assets/esi.png';
 
 function Dashboard(){
-    const [ges,setGes] =useState(true);
 
-    //a enlever  juste pour le warning
-    if(1 == 0) setGes(false);
-
-    return(
+    return (
+        <Router>
         <div className="DashBoard">
-            <section className="LeftDr">
-
+                <section className="LeftDr">
+                <img src={esiLOGO} alt="Scolarité" />
+                <h2>Outils <br />Scolarité</h2>
+                <section className="LinksContainer">
+                        
+                        <Link to={'/Dash/Ens'} > Modifier Enseignant </Link>
+                        <Link to={'/Dash/These'} > Ajouter un mémoire</Link>
+                        <Link>Fonctionalité 3</Link>
+                        <Link>Fonctionalité 4</Link>
+                        <Link>Fonctionalité 5</Link>
+                </section>
             </section>
             <section className="TopDraw">
-
+                <div className="infoLogin">
+                    <h3 id="Username">Nom d'utilisateur</h3>
+                    <button>se deconnecter</button>
+                </div>
+                <h2>Dashboard</h2>
             </section>
             <div className="mainContainer">
-                {
-                    (ges) ? <EnsDash /> : <ThesDash />
-                }
+                <Switch>
+                        <Route exact path='/Dash/Ens' component={EnsDash} />
+                        <Route path='/Dash/These' component={ThesDash} />
+                </Switch>
             </div>
-            
-        </div>
+            </div>
+        </Router>
     );
 }
 

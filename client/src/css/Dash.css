@@ -27,10 +27,44 @@
     grid-row: 1 /span 2;
     grid-column:  1;
     background: #5B5B5B;
-    box-shadow: 0 0 20 #5B5B5B;
-
+    display: grid;
+    grid-template-rows: 10% 15% auto;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.16);
+}
+.LeftDr img {
+    width: 10vh;
+    margin: auto;
+}
+.LeftDr h2 {
+    width: 100%;
+    height: 100%;
+    text-align: left;
+    margin: 10%;
+    font-size: 3vh;
+    
+}
+.LinksContainer{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 5%;
+    height: 90%;
 }
 
+.LinksContainer *{
+    padding: 15%;
+    text-align: left;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 2vh;
+    transition: 0.1s ease-in-out ;
+}
+
+.LinksContainer *:hover {
+   background: #484848;
+
+}
 .TopDraw{
     width: 100%;
     height: 100%;
@@ -38,15 +72,58 @@
     grid-column:  2;
     color: #505050;
     background:  #D4D4D4;
+    display : flex;
+    flex-direction: row-reverse;
 }
 
+.TopDraw h2{
+
+    width : 75%;
+    text-align: left;
+    margin: auto;
+
+}
+.infoLogin{
+    width: 30vh;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.16);
+    display: flex ;
+    flex-direction: column;
+    justify-content: space-evenly;
+    color: white;
+    background: linear-gradient(269deg, #ff8800, #f8d50f);
+    animation: GradientAnim 1s ease infinite;
+}
+.infoLogin button{
+    font-weight: lighter;
+    box-shadow: none;
+}
 .mainContainer{
     width: 100%;
     height: 100%;
-    grid-row: 2 ;
-    grid-column:  2;
+    grid-row: 2;
+    grid-column:  2 ;
 }
 
+@-webkit-keyframes GradientAnim {
+    0%{background-position:67% 0%}
+    50%{background-position:34% 100%}
+    100%{background-position:67% 0%}
+}
+@-moz-keyframes GradientAnim {
+    0%{background-position:67% 0%}
+    50%{background-position:34% 100%}
+    100%{background-position:67% 0%}
+}
+@-o-keyframes GradientAnim {
+    0%{background-position:67% 0%}
+    50%{background-position:34% 100%}
+    100%{background-position:67% 0%}
+}
+@keyframes GradientAnim {
+    0%{background-position:67% 0%}
+    50%{background-position:34% 100%}
+    100%{background-position:67% 0%}
+}
 
 /*ThessDash Css*/
 .divThese{
@@ -92,6 +169,7 @@ textarea{
     grid-template-rows: auto 20%;
 
 }
+
 
 .RightSide button {
     padding: 20px;
@@ -236,3 +314,4 @@ textarea{
     width: max-content;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.16);
 }
+
