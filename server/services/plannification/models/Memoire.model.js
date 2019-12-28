@@ -15,9 +15,9 @@ const memoireSchema = Schema(
     },
     branche: String,
     description: String,
-    promoteur_ids: [ObjectID],
-    encadreur_ids: [ObjectID],
-    etudiants_ids: [ObjectID],
+    promoteur_ids: [String],
+    encadreur_ids: [String],
+    etudiants_ids: [String],
     liens: [String]
   },
   {

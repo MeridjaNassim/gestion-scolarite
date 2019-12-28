@@ -7,14 +7,15 @@ import "../css/App.css";
 //import ThesDash from "./ThesDash";
 
 function App() {
-
-  const [Loged,setLoged] = useState(false);
-
+  const [Loged, setLoged] = useState(false);
+  const [user, setUser] = useState(null);
   return (
     <div className="App">
-      {
-        Loged ? <HomePage setlogin={setLoged} /> : <Dashboard />
-      }
+      {Loged ? (
+        <Dashboard setLogin={setLoged} userData={user} />
+      ) : (
+        <HomePage setlogin={setLoged} setUser={setUser} />
+      )}
     </div>
   );
 }
