@@ -4,6 +4,7 @@
   "description": "Back End of Gestion Scolarité",
   "main": "server.js",
   "scripts": {
+    "start": "docker-compose up",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Meridja Abdellah Nassim",
