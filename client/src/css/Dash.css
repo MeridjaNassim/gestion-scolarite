@@ -232,15 +232,15 @@ label {
 }
 
 .EnsCard {
-  display: grid;
-  grid-template-rows: 40% 60%;
+  height: 100%;
+  width: 100%;
 }
 
 .PersonalInfo {
   display: grid;
   grid-template-columns: 20% auto;
-  margin: auto;
   width: 100%;
+  height: 100%;
 }
 
 .PersonalInfo img {
@@ -259,16 +259,28 @@ label {
 .infoItem {
   display: inline-block;
   margin: 1%;
-  min-width: 30%;
-  max-width: 32%;
+  width: 25%;
 }
-.infoItem section {
-  width: 100%;
+.infoItemsection {
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 3%;
+  width: 100%;
+  height: 100%;
 }
 
-.infoItem section form {
+.infoItemsection h2 {
+  text-align: left;
+  width: 100%;
+}
+
+.infoItemsection h4 {
+  text-align: left;
+  width: 100%;
+}
+
+
+.infoform {
   width: 100%;
 }
 

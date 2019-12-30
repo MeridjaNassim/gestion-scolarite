@@ -1,8 +1,6 @@
 import React from "react";
 import "../css/Dash.css";
 import pPic from "../assets/teacherprofile.svg";
-import Info from "./Info";
-import Module from "./Module";
 import axios from "axios";
 class EnsDash extends React.Component {
   constructor(props) {
@@ -118,12 +116,14 @@ class EnsDash extends React.Component {
         <div className="EnsCard">
           <section className="PersonalInfo">
             <img src={pPic} alt="Enseignant" />
-            <form className="LeftForm">
+            <form className="infoItemsection">
               <h2>Modifier Information d'un enseignant</h2>
-              <h3 style={{ textAlign: "left" }}>
+              <h4>
                 Séparer les champs a valeurs multiples par ","
-              </h3>
+              </h4>
+              <h2> </h2>
               <input
+                className="infoItem"
                 name="nom"
                 type="text"
                 placeholder="Nom"
@@ -131,6 +131,7 @@ class EnsDash extends React.Component {
                 onChange={e => this._onChange(e)}
               />
               <input
+                className="infoItem"
                 name="prenom"
                 type="text"
                 placeholder="Prenom"
@@ -138,6 +139,7 @@ class EnsDash extends React.Component {
                 onChange={e => this._onChange(e)}
               />
               <input
+                 className="infoItem"
                 name="datenaissance"
                 type="date"
                 placeholder="Date Naissance"
@@ -145,6 +147,7 @@ class EnsDash extends React.Component {
                 onChange={e => this._onChange(e)}
               />
               <input
+              className="infoItem"
                 name="lieunaissance"
                 type="text"
                 placeholder="Lieu de naissance"
@@ -153,6 +156,7 @@ class EnsDash extends React.Component {
                 onChange={e => this._onChange(e)}
               />
               <input
+              className="infoItem"
                 name="adresse"
                 type="text"
                 placeholder="Adresse"
@@ -160,6 +164,7 @@ class EnsDash extends React.Component {
                 onChange={e => this._onChange(e)}
               />
               <input
+              className="infoItem"
                 name="telephone"
                 type="text"
                 placeholder="Numéro de téléphone"
@@ -167,6 +172,7 @@ class EnsDash extends React.Component {
                 onChange={e => this._onChange(e)}
               />
               <input
+              className="infoItem"
                 name="nss"
                 type="text"
                 placeholder="NSS"
@@ -174,6 +180,7 @@ class EnsDash extends React.Component {
                 onChange={e => this._onChange(e)}
               />
               <input
+              className="infoItem"
                 name="etatcivil"
                 type="text"
                 placeholder="Etat Civil"
@@ -181,6 +188,7 @@ class EnsDash extends React.Component {
                 onChange={e => this._onChange(e)}
               />
               <input
+              className="infoItem"
                 name="grade"
                 type="text"
                 placeholder="Grade"
@@ -188,6 +196,7 @@ class EnsDash extends React.Component {
                 onChange={e => this._onChange(e)}
               />
               <input
+              className="infoItem"
                 name="postes"
                 type="text"
                 placeholder="Postes"
@@ -195,6 +204,7 @@ class EnsDash extends React.Component {
                 onChange={e => this._onChange(e)}
               />
               <input
+              className="infoItem"
                 name="daterecrutement"
                 title="date Recrutement"
                 type="date"
