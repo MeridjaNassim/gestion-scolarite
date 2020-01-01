@@ -1,0 +1,13 @@
+to launch the test:
+1-your need to launch the front and the backend servers
+2-install selenium with npm execute :
+    "sudo npm install " // all packages are in package.json 
+3- install chrome web driver or Firefox (geckodriver) execute :
+    "sudo npm install -g chromedriver" or "sudo npm install -g geckodriver"
+    if doesn't work install it without npm  at https://github.com/mozilla/geckodriver/releases
+4-in a seperaterd terminal execute :
+    "selenium-side-runner AjouterMemoireAutomatedTest.side"
+    or With Mocha
+    "Mocha AjouterMemoireAutomatedTest.side"
+    or with Selenium IDE extension in your browser
+5-any problem conctact hm_boudis@esi.dz

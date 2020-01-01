@@ -1,0 +1,302 @@
+{
+  "id": "d645a2e7-c6c7-4727-8a36-623b762cf992",
+  "version": "2.0",
+  "name": "gestion scolarite",
+  "url": "http://localhost:3000/",
+  "tests": [{
+    "id": "e6742bf3-3dd4-4508-a7f7-6c912790437b",
+    "name": "Login automated test",
+    "commands": [{
+      "id": "02aad1c1-9734-419d-88a6-625b1ec00d89",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost:3000/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d7cc31ee-a35b-4840-a1fb-3c032df1a643",
+      "comment": "",
+      "command": "click",
+      "target": "css=.Login",
+      "targets": [
+        ["css=.Login", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/header/div/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Se Connecter')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "156c67ed-a8ea-4067-90df-cf9e6e5cc044",
+      "comment": "",
+      "command": "click",
+      "target": "name=userName",
+      "targets": [
+        ["name=userName", "name"],
+        ["css=.input:nth-child(1)", "css:finder"],
+        ["xpath=//input[@name='userName']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b13ec18b-4655-4d3b-aa65-a90c29dec346",
+      "comment": "",
+      "command": "type",
+      "target": "name=userName",
+      "targets": [
+        ["name=userName", "name"],
+        ["css=.input:nth-child(1)", "css:finder"],
+        ["xpath=//input[@name='userName']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/div/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "badido"
+    }, {
+      "id": "d73f8fdb-05e9-4071-abea-d8d518fa3a87",
+      "comment": "",
+      "command": "type",
+      "target": "name=passwd",
+      "targets": [
+        ["name=passwd", "name"],
+        ["css=.input:nth-child(2)", "css:finder"],
+        ["xpath=//input[@name='passwd']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/div/div/div/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "1234"
+    }, {
+      "id": "ce5fdb74-6cf4-46fd-860f-5513d0a8ebba",
+      "comment": "",
+      "command": "click",
+      "target": "css=.But",
+      "targets": [
+        ["css=.But", "css:finder"],
+        ["xpath=//input[@value='Suivant']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/div/div/div/input[3]", "xpath:idRelative"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "484e8f2a-6863-4b07-987f-d5fe6ce93a18",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Modifier Info Enseignant",
+      "targets": [
+        ["linkText=Modifier Info Enseignant", "linkText"],
+        ["css=a:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'Modifier Info Enseignant')]", "xpath:link"],
+        ["xpath=//div[@id='root']/div/div/section/section/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/Dash/Ens')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'Modifier Info Enseignant')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "51b5f525-9407-4243-8486-c636654ebfde",
+    "name": "Ajouter memoire",
+    "commands": [{
+      "id": "f5157618-afe0-478e-9ef7-db03ece4cd5b",
+      "comment": "",
+      "command": "run",
+      "target": "Login automated test",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8d2dd25e-335d-4396-89fc-14de04ec8229",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Ajouter un mémoire",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2780465e-2290-43e4-b1ee-10dc7fa96955",
+      "comment": "",
+      "command": "mouseDownAt",
+      "target": "name=titre",
+      "targets": [
+        ["name=titre", "name"],
+        ["css=input:nth-child(3)", "css:finder"],
+        ["xpath=//input[@name='titre']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/div/div/section/form/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "161.5333251953125,23.600006103515625"
+    }, {
+      "id": "6a3913d8-89fa-41c1-be21-11cd9b87e78c",
+      "comment": "",
+      "command": "mouseMoveAt",
+      "target": "name=titre",
+      "targets": [
+        ["name=titre", "name"],
+        ["css=input:nth-child(3)", "css:finder"],
+        ["xpath=//input[@name='titre']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/div/div/section/form/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "161.5333251953125,23.600006103515625"
+    }, {
+      "id": "b0039e5f-2032-4744-acd4-76eeffa011c7",
+      "comment": "",
+      "command": "mouseUpAt",
+      "target": "name=titre",
+      "targets": [
+        ["name=titre", "name"],
+        ["css=input:nth-child(3)", "css:finder"],
+        ["xpath=//input[@name='titre']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/div/div/section/form/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "161.5333251953125,23.600006103515625"
+    }, {
+      "id": "d39f630d-bbaa-4423-8659-daf3fd40b4fb",
+      "comment": "",
+      "command": "click",
+      "target": "name=titre",
+      "targets": [
+        ["name=titre", "name"],
+        ["css=input:nth-child(3)", "css:finder"],
+        ["xpath=//input[@name='titre']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/div/div/section/form/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b5f0846f-1397-4e5e-ab1d-5d3d7e451090",
+      "comment": "",
+      "command": "type",
+      "target": "name=titre",
+      "targets": [
+        ["name=titre", "name"],
+        ["css=input:nth-child(3)", "css:finder"],
+        ["xpath=//input[@name='titre']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/div/div/section/form/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "memoire 1"
+    }, {
+      "id": "9073bb68-7c25-4a76-a143-7a0c77d5bebe",
+      "comment": "",
+      "command": "type",
+      "target": "name=branche",
+      "targets": [
+        ["name=branche", "name"],
+        ["css=input:nth-child(4)", "css:finder"],
+        ["xpath=//input[@name='branche']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/div/div/section/form/input[2]", "xpath:idRelative"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "SIL"
+    }, {
+      "id": "5313b236-c4a6-4ce8-bbd2-09df486f4c1e",
+      "comment": "",
+      "command": "type",
+      "target": "css=input:nth-child(5)",
+      "targets": [
+        ["css=input:nth-child(5)", "css:finder"],
+        ["xpath=//input[@name='description']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/div/div/section/form/input[3]", "xpath:idRelative"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": "application de VTC"
+    }, {
+      "id": "92453639-ace6-4d43-b822-787c47d146b0",
+      "comment": "",
+      "command": "type",
+      "target": "name=promoteurs",
+      "targets": [
+        ["name=promoteurs", "name"],
+        ["css=input:nth-child(6)", "css:finder"],
+        ["xpath=//input[@name='promoteurs']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/div/div/section/form/input[4]", "xpath:idRelative"],
+        ["xpath=//input[4]", "xpath:position"]
+      ],
+      "value": "Yassir"
+    }, {
+      "id": "731d1b6a-437f-4f58-8d0e-3a31c302f54f",
+      "comment": "",
+      "command": "type",
+      "target": "name=encadreurs",
+      "targets": [
+        ["name=encadreurs", "name"],
+        ["css=input:nth-child(7)", "css:finder"],
+        ["xpath=//input[@name='encadreurs']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/div/div/section/form/input[5]", "xpath:idRelative"],
+        ["xpath=//input[5]", "xpath:position"]
+      ],
+      "value": "Mme Oufaida"
+    }, {
+      "id": "b8ac2a6f-866b-4cc4-afde-7cffd0a53848",
+      "comment": "",
+      "command": "type",
+      "target": "name=etudiants",
+      "targets": [
+        ["name=etudiants", "name"],
+        ["css=input:nth-child(8)", "css:finder"],
+        ["xpath=//input[@name='etudiants']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/div/div/section/form/input[6]", "xpath:idRelative"],
+        ["xpath=//input[6]", "xpath:position"]
+      ],
+      "value": "Boudis, Meridja"
+    }, {
+      "id": "54759511-1648-4a62-b991-3344dc2b9728",
+      "comment": "",
+      "command": "type",
+      "target": "name=links",
+      "targets": [
+        ["name=links", "name"],
+        ["css=textarea", "css:finder"],
+        ["xpath=//textarea[@name='links']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/div/div/section/form/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "yassir.io"
+    }, {
+      "id": "9c8fa8f8-b73b-4c4a-b04f-9cf20532ff0b",
+      "comment": "",
+      "command": "mouseDownAt",
+      "target": "css=button:nth-child(2)",
+      "targets": [
+        ["css=button:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/div/div/section[2]/button", "xpath:idRelative"],
+        ["xpath=//section[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Ajouter')]", "xpath:innerText"]
+      ],
+      "value": "37.449951171875,17.73333740234375"
+    }, {
+      "id": "4f85b721-27ca-4f14-9941-c1e8c2347b74",
+      "comment": "",
+      "command": "mouseUpAt",
+      "target": "css=button:nth-child(2)",
+      "targets": [
+        ["css=button:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/div/div/section[2]/button", "xpath:idRelative"],
+        ["xpath=//section[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Ajouter')]", "xpath:innerText"]
+      ],
+      "value": "37.449951171875,17.73333740234375"
+    }, {
+      "id": "572ab8d8-b6b9-43a9-8218-de7869898987",
+      "comment": "",
+      "command": "click",
+      "target": "css=button:nth-child(2)",
+      "targets": [
+        ["css=button:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='root']/div/div/div/div/section[2]/button", "xpath:idRelative"],
+        ["xpath=//section[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Ajouter')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "6bb928fb-3eb1-4d48-bdb0-55dae686ecbb",
+    "name": "Test Ajouter mémoire",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["51b5f525-9407-4243-8486-c636654ebfde"]
+  }],
+  "urls": ["http://localhost:3000/", "http://localhost:3000/Dash/these"],
+  "plugins": []
+}
