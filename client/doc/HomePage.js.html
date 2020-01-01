@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: HomePage.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: HomePage.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import React, { useState } from "react";
+
+//Components
+import Card from "./Card";
+import Login from "./Login";
+
+//Stylesheet
+import "../css/StyleStatic.css";
+
+//images
+import HomeImage from "../assets/scolarité-ado.jpg";
+import DesImage from "../assets/file-20181211-76974-1vep43e.jpg";
+import footerimg from "../assets/footeresi.png";
+
+//icons
+import esiLOGO from "../assets/esi.png";
+import outils from "../assets/pencil-case.svg";
+import these from "../assets/open-book.svg";
+import calendar from "../assets/calendar.svg";
+import study from "../assets/study.svg";
+import classroom from "../assets/classroom.svg";
+
+/**
+ * function ScrollDown 
+ * @description scrolling down button in Home page
+ */
+function ScrollDown() {
+  var element = document.querySelector("#scrollto");
+  element.scrollIntoView({ behavior: "smooth" });
+}
+
+/**
+ * @param {props}  props
+ * @description JSX of the home page view
+ */
+
+function HomePage(props) {
+  const [showLogin, setShowLogin] = useState(false);
+
+  return (
+    &lt;div>
+      &lt;img id="fontimage" src={HomeImage} alt="Scola" />
+
+      {showLogin ? (
+        &lt;Login
+          setlogin={props.setlogin}
+          setUser={props.setUser}
+          onCancel={e => setShowLogin(false)}
+        />
+      ) : (
+        &lt;header>
+          &lt;div className="nav">
+            &lt;img src={esiLOGO} alt="Scolarité" className="esi" />
+            &lt;h2>| Scolarité web app&lt;/h2>
+            &lt;button onClick={e => setShowLogin(true)} className="Login">
+              Se Connecter
+            &lt;/button>
+          &lt;/div>
+
+          &lt;div className="centralText">
+            &lt;img className="outilico floating" src={outils} alt="Outils">&lt;/img>
+            &lt;h1 className="MainTXT">Des outils indispensables&lt;/h1>
+            &lt;h1 className="light">pour la scolarité&lt;/h1>
+            &lt;h2 className="light">Automatisé et facile à utiliser&lt;/h2>
+          &lt;/div>
+          &lt;div className="DetailSection">
+            &lt;h3>Plus de details&lt;/h3>
+            &lt;button onClick={ScrollDown} className="floating">
+              v
+            &lt;/button>
+          &lt;/div>
+        &lt;/header>
+      )}
+      &lt;div id="scrollto" className="HomeGestionDescription">
+        &lt;h1>Gestion de scolarité&lt;/h1>
+        &lt;p>
+          Automatiser le traitement de l’information est une solution
+          inévitable, c’est pour cela que nous avons opté pour une application
+          web accessible par tous les acteurs principaux de l’Établissement avec
+          une interface et des fonctionnalités accessible et spécifique à
+          chacun, permettant une gestion meilleure et un travail cadré sans
+          risque
+        &lt;/p>
+        &lt;img className=" floating" src={DesImage} alt="Gestion-Scolarité" />
+      &lt;/div>
+      &lt;div className="HomeToutOutils">
+        &lt;h1>Tout les outils nécessaires&lt;/h1>
+        &lt;section className="HTOContainer">
+          &lt;section className="CardHolder floating">
+            &lt;Card title="Entrée des étudiants" icone={classroom} />
+            &lt;Card title="Gestion continue" icone={these} />
+            &lt;Card title="Planification" icone={calendar} />
+            &lt;Card title="Gestion du parcours" icone={study} />
+          &lt;/section>
+          &lt;h4>Chacun dispose de plusieurs fonctionnalités&lt;/h4>
+        &lt;/section>
+      &lt;/div>
+      &lt;footer>
+        &lt;section className="secProb">
+          &lt;p>
+            Problème ? &lt;br />
+            Contactez L'adminisrateur :&lt;br />
+            AdminSCO@esi.dz
+          &lt;/p>
+        &lt;/section>
+        &lt;section className="secRights">
+          &lt;p>Scolarité Web App 2019 Tout droit réservé sous license ESI&lt;/p>
+          &lt;h3>Réalisé par&lt;/h3>
+          &lt;p>
+            Meridja Abdallah Nassim
+            &lt;br />
+            Boudis Mohamed Abdelmadjid
+            &lt;br />
+            Adjal yacine
+          &lt;/p>
+        &lt;/section>
+        &lt;img className="fimg" src={footerimg} alt="scola" />
+      &lt;/footer>
+    &lt;/div>
+  );
+}
+
+export default HomePage;
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="EnsDash.html">EnsDash</a></li><li><a href="Form.html">Form</a></li><li><a href="ThesDash.html">ThesDash</a></li></ul><h3>Global</h3><ul><li><a href="global.html#App">App</a></li><li><a href="global.html#Card">Card</a></li><li><a href="global.html#Dashboard">Dashboard</a></li><li><a href="global.html#HomePage">HomePage</a></li><li><a href="global.html#Info">Info</a></li><li><a href="global.html#Loged">Loged</a></li><li><a href="global.html#Login">Login</a></li><li><a href="global.html#Module">Module</a></li><li><a href="global.html#ScrollDown">ScrollDown</a></li><li><a href="global.html#user">user</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.3</a> on Wed Jan 01 2020 17:10:43 GMT+0100 (Central European Standard Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

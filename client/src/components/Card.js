@@ -2,7 +2,10 @@ import React from 'react';
 
 
 import "../css/StyleStatic.css";
-
+/**
+ * 
+ * @param {*} props 
+ */
 function Card(props){
     return(
         <div className="card">

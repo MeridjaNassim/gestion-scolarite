@@ -1,6 +1,9 @@
 import React from "react";
 import "../css/Dash.css";
-
+/**
+ * 
+ * @param {*} props 
+ */
 function Module(props){
 
     let Mod = props.module;

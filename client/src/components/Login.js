@@ -2,7 +2,10 @@ import React from "react";
 import Form from "./Form";
 import "../css/StyleStatic.css";
 import "../css/Login.css";
-
+/**
+ * 
+ * @param {*} props 
+ */
 function Login(props) {
   return (
     <div className="logincls">

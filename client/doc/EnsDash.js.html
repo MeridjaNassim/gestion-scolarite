@@ -1,4 +1,32 @@
-import React from "react";
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: EnsDash.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: EnsDash.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import React from "react";
 import "../css/Dash.css";
 import pPic from "../assets/teacherprofile.svg";
 import axios from "axios";
@@ -128,10 +156,10 @@ class EnsDash extends React.Component {
    */
   render() {
     return (
-      <div className="divDash divEns">
-        <div className="header">
-          <form id="EnsSelection">
-            <input
+      &lt;div className="divDash divEns">
+        &lt;div className="header">
+          &lt;form id="EnsSelection">
+            &lt;input
               type="search"
               name="id"
               id="Ens"
@@ -139,19 +167,19 @@ class EnsDash extends React.Component {
               value={this.state.id}
               placeholder="Selectionez un enseignant par id"
             />
-          </form>
-          <button onClick={e => this.searchEns(e)}>Recherche</button>
-        </div>
-        <div className="EnsCard">
-          <section className="PersonalInfo">
-            <img src={pPic} alt="Enseignant" />
-            <form className="infoItemsection">
-              <h2>Modifier Information d'un enseignant</h2>
-              <h4>
+          &lt;/form>
+          &lt;button onClick={e => this.searchEns(e)}>Recherche&lt;/button>
+        &lt;/div>
+        &lt;div className="EnsCard">
+          &lt;section className="PersonalInfo">
+            &lt;img src={pPic} alt="Enseignant" />
+            &lt;form className="infoItemsection">
+              &lt;h2>Modifier Information d'un enseignant&lt;/h2>
+              &lt;h4>
                 Séparer les champs a valeurs multiples par ","
-              </h4>
-              <h2> </h2>
-              <input
+              &lt;/h4>
+              &lt;h2> &lt;/h2>
+              &lt;input
                 className="infoItem"
                 name="nom"
                 type="text"
@@ -159,7 +187,7 @@ class EnsDash extends React.Component {
                 value={this.state.nom}
                 onChange={e => this._onChange(e)}
               />
-              <input
+              &lt;input
                 className="infoItem"
                 name="prenom"
                 type="text"
@@ -167,7 +195,7 @@ class EnsDash extends React.Component {
                 value={this.state.prenom}
                 onChange={e => this._onChange(e)}
               />
-              <input
+              &lt;input
                  className="infoItem"
                 name="datenaissance"
                 type="date"
@@ -176,7 +204,7 @@ class EnsDash extends React.Component {
                 value={this.state.datenaissance}
                 onChange={e => this._onChange(e)}
               />
-              <input
+              &lt;input
               className="infoItem"
                 name="lieunaissance"
                 type="text"
@@ -185,7 +213,7 @@ class EnsDash extends React.Component {
                 value={this.state.lieunaissance}
                 onChange={e => this._onChange(e)}
               />
-              <input
+              &lt;input
               className="infoItem"
                 name="adresse"
                 type="text"
@@ -193,7 +221,7 @@ class EnsDash extends React.Component {
                 value={this.state.adresse}
                 onChange={e => this._onChange(e)}
               />
-              <input
+              &lt;input
               className="infoItem"
                 name="telephone"
                 type="text"
@@ -201,7 +229,7 @@ class EnsDash extends React.Component {
                 value={this.state.telephone}
                 onChange={e => this._onChange(e)}
               />
-              <input
+              &lt;input
               className="infoItem"
                 name="nss"
                 type="text"
@@ -209,7 +237,7 @@ class EnsDash extends React.Component {
                 value={this.state.nss}
                 onChange={e => this._onChange(e)}
               />
-              <input
+              &lt;input
               className="infoItem"
                 name="etatcivil"
                 type="text"
@@ -217,7 +245,7 @@ class EnsDash extends React.Component {
                 value={this.state.etatcivil}
                 onChange={e => this._onChange(e)}
               />
-              <input
+              &lt;input
               className="infoItem"
                 name="grade"
                 type="text"
@@ -225,7 +253,7 @@ class EnsDash extends React.Component {
                 value={this.state.grade}
                 onChange={e => this._onChange(e)}
               />
-              <input
+              &lt;input
               className="infoItem"
                 name="postes"
                 type="text"
@@ -233,7 +261,7 @@ class EnsDash extends React.Component {
                 value={this.state.postes}
                 onChange={e => this._onChange(e)}
               />
-              <input
+              &lt;input
               className="infoItem"
                 name="daterecrutement"
                 title="date Recrutement"
@@ -242,7 +270,7 @@ class EnsDash extends React.Component {
                 value={this.state.daterecrutement}
                 onChange={e => this._onChange(e)}
               />
-              <button
+              &lt;button
                 style={{
                   width: "25%",
                   height: "3rem",
@@ -254,13 +282,36 @@ class EnsDash extends React.Component {
                 onClick={e => this.SendData(e)}
               >
                 Enregistrer
-              </button>
-            </form>
-          </section>
-        </div>
-      </div>
+              &lt;/button>
+            &lt;/form>
+          &lt;/section>
+        &lt;/div>
+      &lt;/div>
     );
   }
 }
 
 export default EnsDash;
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="EnsDash.html">EnsDash</a></li><li><a href="Form.html">Form</a></li><li><a href="ThesDash.html">ThesDash</a></li></ul><h3>Global</h3><ul><li><a href="global.html#App">App</a></li><li><a href="global.html#Card">Card</a></li><li><a href="global.html#Dashboard">Dashboard</a></li><li><a href="global.html#HomePage">HomePage</a></li><li><a href="global.html#Info">Info</a></li><li><a href="global.html#Loged">Loged</a></li><li><a href="global.html#Login">Login</a></li><li><a href="global.html#Module">Module</a></li><li><a href="global.html#ScrollDown">ScrollDown</a></li><li><a href="global.html#user">user</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.3</a> on Wed Jan 01 2020 17:10:43 GMT+0100 (Central European Standard Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>

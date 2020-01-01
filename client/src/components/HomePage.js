@@ -20,11 +20,19 @@ import calendar from "../assets/calendar.svg";
 import study from "../assets/study.svg";
 import classroom from "../assets/classroom.svg";
 
-//scrolling function
+/**
+ * function ScrollDown 
+ * @description scrolling down button in Home page
+ */
 function ScrollDown() {
   var element = document.querySelector("#scrollto");
   element.scrollIntoView({ behavior: "smooth" });
 }
+
+/**
+ * @param {props}  props
+ * @description JSX of the home page view
+ */
 
 function HomePage(props) {
   const [showLogin, setShowLogin] = useState(false);

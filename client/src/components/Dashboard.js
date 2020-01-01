@@ -3,7 +3,11 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import EnsDash from "./EnsDash";
 import ThesDash from "./ThesDash";
 import esiLOGO from "../assets/esi.png";
-
+/**
+ * @param {function} setLogin 
+ * @param {function} userData
+ * @description returns the Dashboard React Component
+ */
 function Dashboard({ setLogin, userData }) {
   return (
     <Router>

@@ -5,6 +5,7 @@
   "dependencies": {
     "axios": "^0.19.0",
     "bootstrap": "^4.3.1",
+    "jsdoc": "^3.6.3",
     "react": "^16.11.0",
     "react-addons-css-transition-group": "^15.6.2",
     "react-bootstrap": "^1.0.0-beta.16",
@@ -16,7 +17,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "genDoc" : "jsdoc -d ./doc/  ./src/components"
   },
   "eslintConfig": {
     "extends": "react-app"
