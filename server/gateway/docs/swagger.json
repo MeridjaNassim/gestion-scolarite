@@ -1,0 +1,241 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "version": "1.0",
+        "title": "RESTful API documentation",
+        "description": "routes documentation",
+        "license": {
+            "name": "MIT",
+            "url": "https://github.com/MeridjaNassim/gestion-scolarite"
+        }
+    },
+    "host": "localhost:8080",
+    "basePath": "/api-docs",
+    "definitions": {
+        "Compte": {
+            "type": "object",
+            "properties": {
+                "_id": {
+                    "type": "string"
+
+                },
+                "username": {
+                    "type": "string"
+                },
+                "email": {
+                    "type": "string"
+                },
+                "password": {
+                    "type": "string"
+                },
+                "profileType": {
+                    "type": "string"
+                },
+                "profileId": {
+                    "type": "string"
+                },
+                "isAdmin": {
+                    "type": "boolean"
+                }
+            }
+        },
+        "Memoire": {
+            "type": "object",
+            "properties": {
+                "_id": {
+                    "type": "string"
+
+                },
+                "titre": {
+                    "type": "string"
+                },
+                "branche": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "promoteurs_ids": {
+                    "type": "array"
+                },
+                "encadreurs_ids": {
+                    "type": "array"
+                },
+                "etudiants_ids": {
+                    "type": "array"
+                },
+                "liens": {
+                    "type": "array"
+                }
+            }
+        },
+        "Enseignant": {
+            "type": "object",
+            "properties": {
+                "_id": {
+                    "type": "string"
+
+                },
+                "nom": {
+                    "type": "string"
+                },
+                "prenom": {
+                    "type": "string"
+                },
+                "nss": {
+                    "type": "string"
+                },
+                "date_naissance": {
+                    "type": "string"
+                },
+                "lieu_naissance": {
+                    "type": "string"
+                },
+                "date_recrutement": {
+                    "type": "string"
+                },
+                "etat_civil": {
+                    "type": "string"
+                },
+                "num_tels": {
+                    "type": "array"
+                },
+                "adresse": {
+                    "type": "string"
+                },
+                "postes": {
+                    "type": "array"
+                },
+                "grade": {
+                    "type": "string"
+                },
+                "modules": {
+                    "type": "array"
+                }
+            }
+        }
+    },
+    "paths": {
+        "/api/users": {
+            "get": {
+                "description": "Gets all signed users in the application",
+                "operationId": "Get_UsersFormatJson",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+
+                ],
+                "responses": {
+                    "200": {
+                        "description": "request fulfiled with success , users gotten",
+                        "schema": {
+                            "$ref": "#/definitions/Compte"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/users/{username}": {
+            "get": {
+                "description": "Gets one user from database",
+                "operationId": "Get_UserFormatJson",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+
+                ],
+                "responses": {
+                    "200": {
+                        "description": "request fulfiled with success , user fetched",
+                        "schema": {
+                            "$ref": "#/definitions/Compte"
+                        }
+                    }
+                }
+            }
+        },
+        "/signup": {
+            "post": {
+                "description": "Signs one user to the application",
+                "operationId": "Post_SignupFormatJson",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+
+                ],
+                "responses": {
+                    "200": {
+                        "description": "request fulfiled with success , signup done",
+                        "schema": {
+                            "$ref": "#/definitions/Compte"
+                        }
+                    }
+                }
+            }
+        },
+        "/login": {
+            "post": {
+                "description": "fetches account data of a signed up user",
+                "operationId": "Post_LoginFormatJson",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+
+                ],
+                "responses": {
+                    "200": {
+                        "description": "request fulfiled with success , account info sent",
+                        "schema": {
+                            "$ref": "#/definitions/Compte"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/enseignants/update?_id={id}": {
+            "patch": {
+                "description": "Updates specified enseignant with new data",
+                "operationId": "Patch_UpdateFormatJson",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+
+                ],
+                "responses": {
+                    "200": {
+                        "description": "request fulfiled with success , Enseignant's info updated",
+                        "schema": {
+                            "$ref": "#/definitions/Enseignant"
+                        }
+                    }
+                }
+            }
+        },
+        "/api/memoire/add": {
+            "post": {
+                "description": "Adds a new memoire to the database",
+                "operationId": "Post_AddFormatJson",
+                "produces": [
+                    "application/json"
+                ],
+                "parameters": [
+
+                ],
+                "responses": {
+                    "200": {
+                        "description": "request fulfiled with success , Memoire Added",
+                        "schema": {
+                            "$ref": "#/definitions/Memoire"
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+}
