@@ -47,6 +47,6 @@ You can find it in the client/docs folder in html format
 First run the microservices , then hit this url : localhost:8080/api-docs
 
 # Contributors : 
-   *Meridja Nassim - 1CS G6 Student at ESI
-   *Boudis Madjid - 1CS G6 Student at ESI
+   * Meridja Nassim - 1CS G6 Student at ESI
+   * Boudis Madjid - 1CS G6 Student at ESI
    
