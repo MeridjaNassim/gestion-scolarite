@@ -1,6 +1,6 @@
 # Gestion-Scolarite
 
-A MERN web application for the tuition management in a school (ESI)
+A MERN web application for the tuition management in a school (ESI School project)
 
 # How To setup :
 
@@ -45,3 +45,8 @@ You can find it in the client/docs folder in html format
 
 ## Server Side documentation :
 First run the microservices , then hit this url : localhost:8080/api-docs
+
+# Contributors : 
+   *Meridja Nassim - 1CS G6 Student at ESI
+   *Boudis Madjid - 1CS G6 Student at ESI
+   
